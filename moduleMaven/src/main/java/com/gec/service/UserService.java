@@ -17,4 +17,12 @@ public class UserService extends UserContext{
         List<User> users = userMapper.selectByExample(userExample);
         System.out.println(users.get(0));
     }
+
+    @Test
+    public void findAccount(){
+        UserExample.Criteria criteria = userExample.createCriteria();
+        criteria.andAccountEqualTo("mulen");
+        List<User> users = userMapper.selectByExample(userExample);
+        System.out.println(users.get(0));
+    }
 }

@@ -21,4 +21,11 @@
     
     <!--<mvc:resources mapping="/WEB-INF/jsp/**" location="/WEB-INF/jsp/"></mvc:resources>-->
 
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"></mvc:mapping>
+            <bean class="com.gec.interceptor.MyInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 </beans>
