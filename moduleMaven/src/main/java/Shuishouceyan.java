@@ -62,7 +62,7 @@ public class Shuishouceyan implements Cloneable{
 
     @Test
     public void fun3(){
-        System.out.println("以下是实现clone结果=====================");
+        System.out.println("以下是实现Cloneable的clone结果=====================");
         User user=new User();
         user.setUname("小明");
         user.setAccount("xiaoming");
