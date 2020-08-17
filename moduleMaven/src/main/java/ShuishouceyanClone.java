@@ -3,9 +3,9 @@ import org.junit.jupiter.api.Test;
 
 import java.io.*;
 
-public class Shuishouceyan implements Cloneable{
+public class ShuishouceyanClone implements Cloneable{
 
-    public static <T extends Serializable> T clone(T obj) throws IOException, ClassNotFoundException {
+    public static <T extends Serializable> T deepClone(T obj) throws IOException, ClassNotFoundException {
         ByteArrayOutputStream boStream=new ByteArrayOutputStream();
         ObjectOutputStream out = new ObjectOutputStream(boStream);
         out.writeObject(obj);
@@ -49,7 +49,7 @@ public class Shuishouceyan implements Cloneable{
         user.setId(1090);
 
         try {
-            User clone = clone(user);
+            User clone = deepClone(user);
             boolean equals = user.equals(clone);
             System.out.println("最终结果："+equals);
             System.out.println("对象对比结果："+(user==clone));

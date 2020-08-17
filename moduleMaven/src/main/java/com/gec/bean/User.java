@@ -57,6 +57,16 @@ public class User implements Serializable,Cloneable{
                 '}';
     }
 
+    public User() {
+    }
+
+    public User(Integer id, String account, String uname, String password) {
+        this.id = id;
+        this.account = account;
+        this.uname = uname;
+        this.password = password;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
